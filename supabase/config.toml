@@ -1,0 +1,11 @@
+# https://supabase.com/docs/guides/cli/config
+# Set project_id when linking: `supabase link --project-ref <ref>`
+
+# Gateway verify_jwt can reject valid user JWTs (e.g. ES256 / JWT Signing Keys) with 401 Invalid JWT
+# while PostgREST accepts the same token. coach-chat already validates via createClient + auth.getUser().
+[functions.coach-chat]
+verify_jwt = false
+
+# Validates JWT inside the function (same pattern as coach-chat).
+[functions.delete-account]
+verify_jwt = false

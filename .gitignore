@@ -31,10 +31,15 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
 
 # typescript
 *.tsbuildinfo
+
+# stray Expo tunnel artifact
+exp:/
+"exp:"
 
 # generated native folders
 /ios
